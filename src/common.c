@@ -32,6 +32,13 @@
 #include "sndfile.h"
 #include "sfendian.h"
 #include "common.h"
+#ifdef _MSC_VER
+#include <io.h>
+#define access _access
+#define R_OK   4
+#define W_OK   2
+#define X_OK   1
+#endif /* _MSCVER */
 
 /*-----------------------------------------------------------------------------------------------
 ** psf_log_printf allows libsndfile internal functions to print to an internal parselog which

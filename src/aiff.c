@@ -1476,7 +1476,7 @@ aiff_write_header (SF_PRIVATE *psf, int calc_length)
 					}
 				else
 				{	/* the pascal string would have an uneven count so we include a null terminator as pad */
-					char textString [stringLength + 1] ;
+					char* textString = (char*)alloca(sizeof(char) * (stringLength + 1)) ;
 					for (ps = 0 ; ps < stringLength ; ps++)
 						textString [ps] = psf->cues->cue_points [idx].name [ps] ;
 					textString [stringLength] = '\0' ;
@@ -1505,7 +1505,7 @@ aiff_write_header (SF_PRIVATE *psf, int calc_length)
 					}
 				else
 				{	/* the pascal string would have an uneven count so we include a null terminator as pad */
-					char textString [stringLength + 1] ;
+					char* textString = (char*)alloca(sizeof(char) * (stringLength + 1)) ;
 					for (ps = 0 ; ps < stringLength ; ps++)
 						textString [ps] = psf->cues->cue_points [idx].name [ps] ;
 					textString [stringLength] = '\0' ;
@@ -1535,7 +1535,7 @@ aiff_write_header (SF_PRIVATE *psf, int calc_length)
 					}
 				else
 				{	/* the pascal string would have an uneven count so we include a null terminator as pad */
-					char textString [stringLength + 1] ;
+					char* textString = (char*)alloca(sizeof(char) * (stringLength + 1)) ;
 					for (ps = 0 ; ps < stringLength ; ps++)
 						textString [ps] = psf->cues->cue_points [idx].name [ps] ;
 					textString [stringLength] = '\0' ;
@@ -1645,7 +1645,7 @@ aiff_write_header (SF_PRIVATE *psf, int calc_length)
 				}
 			else
 			{	/* the pascal string would have an uneven count so we include a null terminator as pad */
-				char textString [stringLength + 1] ;
+				char* textString = (char*)alloca(sizeof(char) * (stringLength + 1)) ;
 				for (ps = 0 ; ps < stringLength ; ps++)
 					textString [ps] = psf->cues->cue_points [idx].name [ps] ;
 				textString [stringLength] = '\0' ;
