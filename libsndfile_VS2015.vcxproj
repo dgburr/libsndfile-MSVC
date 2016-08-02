@@ -187,7 +187,7 @@
     <ClCompile Include="src\vox_adpcm.c" />
     <ClCompile Include="src\w64.c" />
     <ClCompile Include="src\wav.c" />
-    <ClCompile Include="src\wav_w64.c" />
+    <ClCompile Include="src\wavlike.c" />
     <ClCompile Include="src\windows.c" />
     <ClCompile Include="src\wve.c" />
     <ClCompile Include="src\xi.c" />
@@ -207,7 +207,7 @@
     <ClInclude Include="src\sfendian.h" />
     <ClInclude Include="src\sf_unistd.h" />
     <ClInclude Include="src\test_main.h" />
-    <ClInclude Include="src\wav_w64.h" />
+    <ClInclude Include="src\wavlike.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{65B6B9E6-4D10-484B-BD8A-156FCA00DD4A}</ProjectGuid>
